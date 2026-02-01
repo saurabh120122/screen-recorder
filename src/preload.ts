@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 import * as path from 'path';
 import * as fs from 'fs';
 
-// Promisify fs functions
 const writeFileAsync = (filePath: string, data: Buffer): Promise<void> => {
   return new Promise((resolve, reject) => {
     fs.writeFile(filePath, data, (err) => {

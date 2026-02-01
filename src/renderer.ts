@@ -1,6 +1,3 @@
-// Type definitions
-
-// Wrap everything in IIFE to avoid exports issue
 (function() {
   const selectSourceBtn = document.getElementById('selectSourceBtn') as HTMLButtonElement;
   const startBtn = document.getElementById('startBtn') as HTMLButtonElement;

@@ -10,9 +10,7 @@ function createWindow(): void {
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
-      // Use __dirname which points to dist/ folder where main.js is
       preload: path.join(__dirname, 'preload.js'),
-      // Add these for better compatibility:
       sandbox: false
     }
   });
@@ -20,7 +18,6 @@ function createWindow(): void {
   mainWindow.loadFile('index.html');
   mainWindow.webContents.openDevTools();
   
-  // Debug: Check if preload loaded
   mainWindow.webContents.on('did-finish-load', () => {
     console.log('Page loaded');
   });
